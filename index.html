@@ -25,13 +25,13 @@
             -webkit-text-size-adjust: 100%;
             line-height: 1.4;
             color: #fff;
-            font: 15px/1.4 "Open Sans", sans-serif;
+            font: 14px/1.5 "Open Sans", sans-serif;
             text-align: center
         }
 
         body {
             margin: 0;
-            background-color: #fffede;
+            background-color: #ffd754;
         }
 
         h1 {
@@ -120,12 +120,12 @@
         h2 {
             font-size: 2em;
             margin: 1.5em 0;
-            color: #fff;
+            color: #ffefbc;
             margin: 0em 0em 1em 0em;
         }
 
         h3 {
-            color: #fff;
+            color: #ffefbc;
             font-size: 1.25em;
             margin: 0 0 .5em
         }
@@ -458,11 +458,12 @@
                         Opensea</a></strong><br /><br />
                 <p
                     style="color: #333;padding-top:1em;background-color: #fff;;border-radius: 25px;padding: 10px;margin: 1em;text-align: center;">
-                    <strong>Two Ways To Mint</strong><br />
-                    Choose to <strong>donate a generative art NFT</strong> by transfering to 0xbE3543558E3f66c483a32c6916CC389844d5e048 or increase the ETH amount to <strong>whatever amount</strong> you are comfortable with
+                    <span style="color:#1b512f;font-size: 18px;font-weight: bolder;">Two Ways To Mint</span><br />
+                    ⑴ Choose to <strong>gift a generative art NFT</strong> by transfering to 0xbE3543558E3f66c483a32c6916CC389844d5e048 and mint for .0001 ETH or <br>
+                    ⑵ <strong>increase</strong> the ETH amount to <strong>whatever you are comfortable with</strong>
                 </p>
                 <a class="btn btn-download" href="#" onclick="return false;" style="margin-top:10px;">
-                    <span class="version"><input type="text" value=".0001"> ETH Mint</span></a>
+                    <span class="version"><input type="text" value=".0001" style="color:#616161;font-weight: lighter;text-align: right;" size="3"> ETH Minting Soon</span></a>
                 <p style="color: #fff;font-size: smaller; padding: 0em;">
                     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -477,7 +478,6 @@
                         href="https://etherscan.io/address/0x8Df24bd08Bc6Bc35956E108b64f26D68B1a385e7#writeContract#F2"
                         target="_blank">Etherscan</a><br />
                     (enter your choice for payableAmount)<br />
-                    <br /><i><strong>Love Art and Fuck The Floor Price</strong></i>
                 </p>
             </div>
         </div>
@@ -488,23 +488,24 @@
             <div style="text-align:left">
                 <p
                     style="color: #333;padding-top:1em;background-color: #fff;;border-radius: 25px;padding: 10px;margin: 1em;text-align: center;">
-                    <strong>Love Art and Fuck The Floor Price</strong>
+                    <span style="color:#3a3a3a;font-size: 18px;font-weight: bolder;">Love Art and Fuck The Floor Price</span>
                 </p>
                 <h3>Concept</h3>
                 <p>
                     This generative art collection <a href="https://mindrash.com/">by mindrash</a> demonstrates the literal break from 
                     traditional art framing into this generative, dynamic, and often unusual space. While most are animated, 
-                    some may only have strokes which fade in or show no movement at all.
+                    some may only have strokes which fade in or show no movement at all. Fifteen contributors were asked for their favorite album and an 
+                    adverb. From those album covers, palettes were created and named incorporating their influence into the collection.
                 </p>
             </div>
             <div style="text-align:left">
                 <h3>Technology</h3>
                 <p
                     style="color: #333;padding-top:1em;background-color: #fff;;border-radius: 25px;padding: 10px;margin: 1em;text-align: center;">
-                    <strong>p5.js using the Artblocks template</strong>
+                    <strong>Fully responsive in browser using p5.js on Ethereum with rendered GIFs</strong>
                 </p>
                 <p>
-                    I wanted to strat to dive into more of strict long form generative process by using the Artblocks template with p5.js. All of the pieces 
+                    Here I have started to use more of a long form generative process by using the Artblocks template with p5.js and going fully responsive in the browser. All of the pieces 
                     are generated from a random hash that produces deterministric random results. To display in marketplaces I choose to produce 
                     GIFs as previews in this situation which means there is a multistep process.
                 </p>
@@ -607,40 +608,24 @@
                     <th>description</th>
                 </tr>
                 <tr>
-                    <td>shape</td>
-                    <td>square or rectangle</td>
+                    <td>type</td>
+                    <td>stoic, dynamic, wildcard</td>
                 </tr>
                 <tr>
-                    <td>border_color</td>
-                    <td>#fffede or #202020</td>
+                    <td>grid</td>
+                    <td>honeycomb grid in background</td>
                 </tr>
                 <tr>
-                    <td>has_section_frame</td>
-                    <td>A small section highlighted with borders</td>
+                    <td>blend</td>
+                    <td>internal square region with different contrasts</td>
                 </tr>
                 <tr>
-                    <td>has_trip</td>
-                    <td>Triptyct borders</td>
+                    <td>letter</td>
+                    <td>k, u, c, f</td>
                 </tr>
                 <tr>
-                    <td>has_glitch</td>
-                    <td>Glitch in top layer or section</td>
-                </tr>
-                <tr>
-                    <td>is_inverted</td>
-                    <td>Colors inverted</td>
-                </tr>
-                <tr>
-                    <td>frame_count</td>
-                    <td>Number of frames used for the GIF</td>
-                </tr>
-                <tr>
-                    <td>generations</td>
-                    <td>Number of iterations of shape layering for base layer</td>
-                </tr>
-                <tr>
-                    <td>all_palettes</td>
-                    <td>Indicates color mix from all palettes or one for the base layer</td>
+                    <td>palette</td>
+                    <td>16</td>
                 </tr>
             </table>
         </div>
