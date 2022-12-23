@@ -441,8 +441,6 @@
             }
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-    <script src="https://unpkg.com/moralis@0.0.184/dist/moralis.js"></script>
 </head>
 
 <body>
@@ -453,18 +451,26 @@
                 style="max-width: 600px; width: 70%;margin: 30px 0px 0px 0px;padding: 0px;border: 0px;" />
             <br />
             <div
-                style="background-color: #3b3b3b;color:#fff;width: 80%;max-width: 600px;margin: 0 auto;padding: .3em 2em .1em 2em;opacity:.90;border-radius: 25px;">
+                style="background-color: #3b3b3b;color:#fff;width: 80%;max-width: 600px;margin: 0 auto;padding: .3em 2em 2em 2em;opacity:.90;border-radius: 25px;">
                 <br /><strong><a href="https://opensea.io/collection/fuck-the-floor-price">View the collection on
-                        Opensea</a></strong><br /><br />
+                        Opensea</a></strong><br />
                 <p
                     style="word-break: break-all;color: #333;padding-top:1em;background-color: #fff;;border-radius: 25px;padding: 10px;margin: 1em;text-align: center;">
-                    <span style="color:#1b512f;font-size: 18px;font-weight: bolder;">Two Ways To Mint</span><br />
-                    ⑴ Choose to <strong>gift a generative art NFT</strong> by transferring to<br/>0xf66fB3CB6B601D8E0DBC39F0408C18c1d021A2e8 and mint for .0001 ETH or <br>
-                    ⑵ <strong>increase</strong> the ETH amount to <strong>whatever you are comfortable with</strong>
-                </p>
-                <a class="btn btn-download" href="#" onclick="return false;" style="margin-top:10px;">
-                    <span class="version"><input type="text" value=".0001" style="color:#616161;font-weight: lighter;text-align: right;" size="5"> ETH Minting Soon</span></a>
-                <p style="color: #fff;font-size: smaller; padding: 0em;">
+                    <span style="color:#1b512f;font-size: 18px;font-weight: bolder;">Responsive Size Viewer</span><br /><br />
+                    <span style="color: #010101; font-weight: thinner; font-size: 1.1em; padding: .7em .5em; text-align: right; vertical-align: middle;" >Token ID</span>
+                     <input type="text" value="1" autofocus="autofocus" placeholder="1" id="tokenID" style="color: #010101; font-weight: thinner; font-size: 1.1em; padding: .7em .5em; text-align: right; vertical-align: middle;" size="4"/>
+                    &nbsp;
+                    <a class="btn btn-download" href="#" style="font-size: 1.1em;" onclick="openViewer();return false;">
+                        <span class="version">View Now</span></a>
+                        <br /><br />
+                        This work is fully responsive to browser size.<br />
+                        To specify an exact size add <i>&width=6000</i> (example) to the end of the url.<br />
+                        Hot keys: [s] to save current size in static PNG. 
+                    </p>
+                <div>
+                    This collection minted out on December 17, 2022 with a total size of 997.<br/>
+                    <a href="https://fuckthefloorprice.xyz/art/" target="_blank">Random Generator</a>
+                </div>
                     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
                         crossorigin="anonymous"></script>
@@ -474,11 +480,6 @@
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
                         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
                         crossorigin="anonymous"></script>
-                    Don't trust this site? Mint on <a
-                        href="https://etherscan.io/address/0xaf7c52aea9d8516de7267e4efa9b81bcf44ebf14#writeContract#F2"
-                        target="_blank">Etherscan</a><br />
-                    (enter your choice for payableAmount in WEI)<br />
-                </p>
             </div>
         </div>
     </div>
@@ -488,14 +489,22 @@
             <div style="text-align:left">
                 <p
                     style="color: #333;padding-top:1em;background-color: #fff;;border-radius: 25px;padding: 10px;margin: 1em;text-align: center;">
-                    <span style="color:#3a3a3a;font-size: 18px;font-weight: bolder;">Love Art and Fuck The Floor Price</span>
+                    <span style="color:#3a3a3a;font-size: 18px;font-weight: bolder;">Love Art and Fuck The Floor
+                        Price</span>
                 </p>
                 <h3>Concept</h3>
                 <p>
-                    This generative art collection <a href="https://mindrash.com/">by mindrash</a> demonstrates the literal break from 
-                    traditional art framing into this generative, dynamic, and often unusual space. While most are animated, 
-                    some may only have strokes which fade in or show no movement at all. Fifteen contributors were asked for their favorite album and an 
-                    adverb. From those album covers, palettes were created and named incorporating their influence into the collection.
+                    This generative art collection <a href="https://mindrash.com/">by mindrash</a> demonstrates the
+                    literal break from
+                    traditional art framing into this generative, dynamic, and often unusual space. While most are
+                    animated,
+                    some may only have strokes which fade in or show no movement at all. Fifteen contributors were asked
+                    for their favorite album and an
+                    adverb. From those album covers, palettes were created and named incorporating their influence into
+                    the collection.
+                </p>
+                <p>
+                    <strong>They don't all move and they don't always move. That's all part of it. Have fun.</strong>
                 </p>
             </div>
             <div style="text-align:left">
@@ -505,15 +514,18 @@
                     <strong>Fully responsive in browser using p5.js with rendered GIFs on Ethereum </strong>
                 </p>
                 <p>
-                    Here I have started to use more of a long form generative process by using the Artblocks template with p5.js and going fully responsive in the browser. All of the pieces 
-                    are generated from a random hash that produces deterministric random results. To display in marketplaces I choose to produce 
+                    Here I have started to use more of a long form generative process by using the Artblocks template
+                    with p5.js and going fully responsive in the browser. All of the pieces
+                    are generated from a random hash that produces deterministric random results. To display in
+                    marketplaces I choose to produce
                     GIFs as previews in this situation which means there is a multistep process.
                 </p>
                 <p>
-                    All pieces are responsive to display at any size of the browser or by explictly specifying ?width=1000 (or desired pixels) on the animation url. 
+                    All pieces are responsive to display at any size of the browser or by explictly specifying
+                    ?width=1000 (or desired pixels) on the animation url.
                 </p>
                 <p>
-                    Hot key [s] to save PNGs from the current view for print or any other use. 
+                    Hot key [s] to save PNGs from the current view for print or any other use.
                 </p>
             </div>
         </div>
@@ -549,7 +561,8 @@
                 </tr>
                 <tr>
                     <td>Dimensions</td>
-                    <td>Fully Responsive p5.js@1.5.0, rendered GIFs at 1000x1000 pixels, hot key [s] to save at any size</td>
+                    <td>Fully Responsive p5.js@1.5.0, rendered GIFs at 1000x1000 pixels, hot key [s] to save at any size
+                    </td>
                 </tr>
                 <tr>
                     <td>Image Type</td>
@@ -570,8 +583,8 @@
                     <td>CC BY-NC 4.0</td>
                 </tr>
                 <tr>
-                    <td>Total Supply</td>
-                    <td>450</td>
+                    <td>Supply</td>
+                    <td>997</td>
                 </tr>
             </table>
         </div>
@@ -612,8 +625,12 @@
                     <td>stoic, dynamic, wildcard</td>
                 </tr>
                 <tr>
-                    <td>grid</td>
-                    <td>honeycomb grid in background</td>
+                    <td>mint pass</td>
+                    <td>True/False - to be used for future mints</td>
+                </tr>
+                <tr>
+                    <td>your rash role</td>
+                    <td>You are now a part of the RASH. To be used for future utility</td>
                 </tr>
                 <tr>
                     <td>blend</td>
@@ -624,25 +641,23 @@
                     <td>k, u, c, f</td>
                 </tr>
                 <tr>
-                    <td>palette</td>
-                    <td>16</td>
+                    <td>palettes</td>
+                    <td>16, 15 of which were derived from input of people's favorite albums</td>
                 </tr>
             </table>
         </div>
     </div>
 
-        <footer class=site-footer>
-            <p><a class=twitter-follow-button href=https://twitter.com/mindrash data-show-count=false data-lang=en
-                    data-size=large>Follow @mindrash</a>
-                © 2022 mindrash
-        </footer>
+    <footer class=site-footer>
+        <p><a class=twitter-follow-button href=https://twitter.com/mindrash data-show-count=false data-lang=en
+                data-size=large>Follow @mindrash</a>
+            © 2022 mindrash
+    </footer>
 
-        <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="abi.js?v12"></script>
-        <script src="mint.js?v12"></script>
-        <script>!function (l, u) { "use strict"; var t, e, a, n, o, r, d = l.document; function i(t) { var e, a, n, o, r, i, c, g = function t(e, a) { return !0 === e.hasAttribute(a) ? e : e.parentNode !== d.body ? t(e.parentNode, a) : u }(t.target, "data-ga-action"), s = !1; g !== u && (e = g.getAttribute("data-ga-action") || u, a = g.getAttribute("data-ga-category") || u, n = g.getAttribute("data-ga-label") || u, o = g.getAttribute("href"), r = parseInt(g.getAttribute("data-ga-value"), 10) || u, ga !== u && a !== u && e !== u && (t.preventDefault(), "Download" !== a && !0 !== t.ctrlKey && !0 !== t.metaKey && 2 !== t.which || (s = !0, l.open(o)), i = o, ga("send", "event", a, e, n, r, { hitCallback: function () { !1 === s && (c !== u && clearTimeout(c), l.location = i) } }), c = setTimeout(function () { !1 === s && (l.location.href = i) }, 1e3))) } e = d, a = "script", n = "ga", (t = l).GoogleAnalyticsObject = n, t.ga || (t.ga = function () { (t.ga.q = t.ga.q || []).push(arguments) }), t.ga.l = +new Date, o = e.createElement(a), r = e.getElementsByTagName(a)[0], o.src = "https://www.google-analytics.com/analytics.js", r.parentNode.insertBefore(o, r), ga("create", "UA-17904194-1", "auto"), ga("set", "anonymizeIp", !0), ga("send", "pageview"), l.document.addEventListener("click", i), l.onload = function () { var t, e, a, n, o; e = "script", a = "twitter-wjs", o = (t = d).getElementsByTagName(e)[0], t.getElementById(a) || ((n = t.createElement(e)).id = a, n.src = "https://platform.twitter.com/widgets.js", o.parentNode.insertBefore(n, o)) } }(window)</script>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js?v1"></script>
+    <script>!function (l, u) { "use strict"; var t, e, a, n, o, r, d = l.document; function i(t) { var e, a, n, o, r, i, c, g = function t(e, a) { return !0 === e.hasAttribute(a) ? e : e.parentNode !== d.body ? t(e.parentNode, a) : u }(t.target, "data-ga-action"), s = !1; g !== u && (e = g.getAttribute("data-ga-action") || u, a = g.getAttribute("data-ga-category") || u, n = g.getAttribute("data-ga-label") || u, o = g.getAttribute("href"), r = parseInt(g.getAttribute("data-ga-value"), 10) || u, ga !== u && a !== u && e !== u && (t.preventDefault(), "Download" !== a && !0 !== t.ctrlKey && !0 !== t.metaKey && 2 !== t.which || (s = !0, l.open(o)), i = o, ga("send", "event", a, e, n, r, { hitCallback: function () { !1 === s && (c !== u && clearTimeout(c), l.location = i) } }), c = setTimeout(function () { !1 === s && (l.location.href = i) }, 1e3))) } e = d, a = "script", n = "ga", (t = l).GoogleAnalyticsObject = n, t.ga || (t.ga = function () { (t.ga.q = t.ga.q || []).push(arguments) }), t.ga.l = +new Date, o = e.createElement(a), r = e.getElementsByTagName(a)[0], o.src = "https://www.google-analytics.com/analytics.js", r.parentNode.insertBefore(o, r), ga("create", "UA-17904194-1", "auto"), ga("set", "anonymizeIp", !0), ga("send", "pageview"), l.document.addEventListener("click", i), l.onload = function () { var t, e, a, n, o; e = "script", a = "twitter-wjs", o = (t = d).getElementsByTagName(e)[0], t.getElementById(a) || ((n = t.createElement(e)).id = a, n.src = "https://platform.twitter.com/widgets.js", o.parentNode.insertBefore(n, o)) } }(window)</script>
 </body>
 
 </html>
